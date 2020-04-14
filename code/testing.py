@@ -86,6 +86,8 @@ def test_video(vid):
     np.save("..\\Dataset\\videos\scene1\megaBlockMotInfVal_set1_p1_test_20-20_k5.npy", mega_block_mot_inf_val)
     codewords = np.load("..\\Dataset\\videos\scene1\codewords_set2_p1_train_20-20_k5.npy")
     print("codewords", codewords)
+    construct_min_dist_matrix(mega_block_mot_inf_val, codewords,
+                              rows, cols, vid)
     return
 
 
@@ -93,7 +95,7 @@ if __name__ == '__main__':
     '''
         определяет датасет для тестирования и вызывает test_video для каждого видео
     '''
-    testSet = [r"..\Dataset\videos\scene1\test1.avi"]
+    testSet = [r"..\\Dataset\\videos\\scene2\\2_test1.avi"]
     for video in testSet:
         test_video(video)
     print("Done")

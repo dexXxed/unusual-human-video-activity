@@ -31,7 +31,7 @@ if __name__ == '__main__':
     '''
         определяет обучающий датасет и вызывает train_from_video для каждого видео
     '''
-    trainingSet = [r"..\Dataset\\videos\scene1\train1.avi"]
+    trainingSet = [r"..\Dataset\\videos\\scene1\\train1.avi"]
     for video in trainingSet:
         train_from_video(video)
     print "Done"
